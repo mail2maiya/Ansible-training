@@ -1,0 +1,34 @@
+---
+- name: This sets up an httpd webserver
+  hosts: common 
+#  vars_files:
+#    - "vars.yaml"
+#  vars_prompt:
+#     - name: "age"
+#       private: no
+#       prompt: "Enter your age"
+#     - name: "myname"
+#       private: no
+#       prompt: "Enter your name"
+#     - name: "compname"
+#       private: no
+#       prompt: "Enter your company name"
+#  vars:
+#    myname: "sudhakar-playbook"
+#    mycomp: "hp-playbook"
+
+  tasks:
+#  - name: Install the httpd apps
+#    yum: name=httpd
+#  - name: start the httpd service
+#    service: name=httpd state=started
+   - debug:
+     msg: System {{ myname }} has uuid {{ ansible_product_uuid }}
+   - debug: msg="System {{ myname }} has uuid {{ ansible_product_uuid }}"
+   - debug: msg={{ ansible_product_uuid }}
+   - debug: var=ansible_product_uuid
+   - debug:
+     var: ansible_product_uuid
+   - debug:
+     var: ansible_product_uuid
+

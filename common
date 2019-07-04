@@ -1,0 +1,9 @@
+[test1]
+127.0.0.1 ansible_connection=local
+
+[test2]
+10.76.142.247 
+
+[common:children]
+127.0.0.1 ansible_connection=local
+10.76.142.247

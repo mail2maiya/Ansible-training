@@ -1,0 +1,14 @@
+[web]
+127.0.0.1 ansible_connection=local myname=isudhakar-host-var-special
+
+[db]
+10.76.142.247 ansible_user=root ansible_become=yes myname=isudhakar-host-var
+
+[common:children]
+web
+db
+
+[web:vars]
+myname: sudhakar-playbook
+mycompany: hpe-playbook
+

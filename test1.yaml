@@ -1,0 +1,12 @@
+--- 
+- 
+  hosts: localhost
+  name: "create group and user"
+  tasks: 
+    - 
+      group: "name=manager1 state=present"
+      name: "create user"
+      user: "name=test1 group=manager1 shell=/bin/bash"
+      - debug: msg="System {{ myname }} has uuid {{ ansible_product_uuid }}"
+...
+

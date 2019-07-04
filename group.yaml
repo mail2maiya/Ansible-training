@@ -1,0 +1,11 @@
+---
+-
+  hosts: localhost
+  name: "create group and user"
+  tasks:
+    - 
+      name: "create group"
+      group: "name=manager1 state=present"
+      name: "create user"
+      user: "name=test1 state=present"
+...

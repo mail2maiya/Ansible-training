@@ -1,0 +1,14 @@
+----
+-
+ name: "OS VERSION"
+ hosts: same
+ tasks:
+ name: Create directory Maiya
+ win_file: path=C:\Maiya state=directory
+ when: ansible_os_family != "RedHat"
+ name: create the file for maiya
+ win_file: path=C:\Maiya\index.html state=touch
+ when: ansible_os_family != "RedHat"
+ name: write the contents of the file
+ win_lineinfile: path=C:\Maiya\index.html line="This is Windows Machine"
+...

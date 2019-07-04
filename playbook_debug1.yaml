@@ -1,0 +1,13 @@
+---
+- hosts:  web
+  vars:
+     myname: "sudhakar-playbook"
+     mycompany: "hpe-playbook"
+  tasks:
+    - debug:
+        msg: System {{ myname }} has uuid {{ ansible_product_uuid }}
+    - debug:
+        msg: "{{ ansible_product_uuid }}"
+    - debug: var=ansible_product_uuid
+    - debug:
+        msg: play1 {{ myname }} {{ mycompany }} 

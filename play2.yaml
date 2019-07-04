@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+    - debug:
+        msg: MAJA MADU
+
+- name: Include a play after another play
+  include: play1.yaml
+...

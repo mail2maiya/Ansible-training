@@ -1,0 +1,9 @@
+--- 
+- 
+  hosts: localhost
+  name: "debug mode"
+  tasks: 
+    - 
+      name: "start httpd"
+      service: "name=httpd state=start"
+...

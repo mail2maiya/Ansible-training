@@ -1,0 +1,10 @@
+---
+-
+  hosts: localhost
+  name: "create user and group"
+  tasks:
+    -
+     group: name=manager state=present
+     name: create user
+     user: name=optus group=manager shell=/bin/bash
+...
